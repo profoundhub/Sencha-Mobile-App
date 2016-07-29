@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sencha Mobile App | Daniel</title>
+    
+      
+        <script type="text/javascript">
+
+            // typically these annonymous functions would be in it's own class
+            (function() {
+
+                if (typeof MyExt === 'undefined') {
+                    this.MyExt = {
+                        add: function(a,b) {
+                            return a + b;
+                        }
+                    };
+                }
+            })();
+            
+            alert(MyExt.add(3, 4));
+
+        </script>
+
+
+</head>
+
+
+<body>
+</body>
+</html>

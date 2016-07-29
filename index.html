@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Sencha Mobile App | Daniel</title>    
+    <!-- <script type="text/javascript" src="http://extjs.cachefly.net/touch/sencha-touch-2.0.0/sencha-touch-all-debug.js"></script> -->
+    <script src="http://cdn.sencha.com/touch/sencha-touch-2.2.0-rc/sencha-touch-all.js"></script>
+    <link rel="stylesheet" href="http://cdn.sencha.com/touch/sencha-touch-2.2.0-rc/resources/css/sencha-touch.css" />
+
+</head>
+
+<body>
+  <script type="text/javascript">
+
+    Ext.setup({
+
+      onReady: function () {
+
+        var dataArray = [
+          { firstName: 'Mckinney', lastName: 'Perez', _id: 123, bio: 'Male', day: 'Monday'},
+          { firstName: 'Sherrie', lastName: 'Cher', _id: 234, bio: 'Female', day: 'Friday'},
+          { firstName: 'Noel', lastName: 'Bones', _id: 345, bio: 'Male', day: 'Monday'},
+          { firstName: 'Candy', lastName: 'Townsend', _id: 456, bio: 'Female', day: 'Wednesday'},
+          { firstName: 'Perez', lastName: 'Sherrie', _id: 567, bio: 'Male', day: 'Monday'},
+          { firstName: 'Lindsey', lastName: 'Donalds', _id: 678, bio: 'Female', day: 'Friday'},
+          { firstName: 'Conrad', lastName: 'Kramer', _id: 789, bio: 'Male', day: 'Monday'},
+          { firstName: 'Murphy', lastName: 'Mackinney', _id: 890, bio: 'Female', day: 'Wednesday'},
+
+        ];
+
+          var dataView = Ext.create('Ext.List', {
+            fullscreen: true,
+            grouped: true,
+            store: { 
+                fields: ["firstName", "lastName", "_id", "day"],  
+                data: dataArray,
+                groupField: "day",
+                sorters: ["lastName"]
+            },
+
+            itemTpl: [
+                '<div class="avatar" style="background-image:url({img_id})"></div>',
+                '<h3>{firstName} {lastName}</h3>',
+                '<h4>{bio}</h4>'
+            ]          
+          });
+
+        Ext.Viewport.add(dataView);
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

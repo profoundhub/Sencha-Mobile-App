@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Sencha Mobile App | Daniel</title>    
+    <!-- <script type="text/javascript" src="http://extjs.cachefly.net/touch/sencha-touch-2.0.0/sencha-touch-all-debug.js"></script> -->
+    <script src="http://cdn.sencha.com/touch/sencha-touch-2.2.0-rc/sencha-touch-all.js"></script>
+    <link rel="stylesheet" href="http://cdn.sencha.com/touch/sencha-touch-2.2.0-rc/resources/css/sencha-touch.css" />
+
+</head>
+
+<body>
+  <script type="text/javascript">
+
+    Ext.setup({
+
+      onReady: function () {
+
+        var dataArray = [
+          { firstName: 'Mckinney', lastName: 'Perez', id: , bio: '', day: 'Monday'},
+          { firstName: 'Sherrie', lastName: 'Cher', id: , bio: '', day: 'Friday'},
+          { firstName: 'Noel', lastName: 'Bones', id: , bio: '', day: 'Monday'},
+          { firstName: 'Candy', lastName: 'Townsend', id: , bio: '', day: 'Wednesday'},
+          { firstName: 'Perez', lastName: 'Sherrie', id: , bio: '', day: 'Monday'},
+          { firstName: 'Lindsey', lastName: 'Donalds', id: , bio: '', day: 'Friday'},
+          { firstName: 'Conrad', lastName: 'Kramer', id: , bio: '', day: 'Monday'},
+          { firstName: 'Murphy', lastName: 'Mackinney', id: , bio: '', day: 'Wednesday'},
+
+        ];
+
+
+
+          var dataArray2 = [{
+          
+          "_id": "579b796fda13645a5e9ac2c6",
+          "index": 0,
+          "guid": "47fa44ff-305b-4df1-8576-71c9ecd39e31",
+          "isActive": false,
+          "balance": "$2,225.64",
+          "picture": "http://placehold.it/32x32",
+          "age": 25,
+          "eyeColor": "blue",
+          "name": {
+            "first": "Mckinney",
+            "last": "Perez"
+          },
+          "company": "GEEKOLOGY",
+          "email": "mckinney.perez@geekology.co.uk",
+          "phone": "+1 (993) 501-2578",
+          "address": "201 Minna Street, Belgreen, Mississippi, 3542",
+          "about": "Mollit dolor amet consectetur commodo reprehenderit excepteur Lorem. Minim non aliqua cillum qui mollit et reprehenderit dolore minim. Exercitation incididunt quis dolor reprehenderit labore cupidatat pariatur. Ad qui aliquip nostrud aute reprehenderit irure magna ad dolore incididunt voluptate. Do ex ut et amet consequat fugiat. Magna et duis ipsum excepteur in veniam occaecat aliqua.",
+          "registered": "Thursday, June 2, 2016 5:35 PM",
+          "latitude": "-55.058206",
+          "longitude": "-115.134036",
+          "tags": [
+            "aliquip",
+            "mollit",
+            "veniam",
+            "deserunt",
+            "mollit"
+          ],
+          "range": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "friends": [
+            {
+              "id": 0,
+              "name": "Lindsey Kramer"
+            },
+            {
+              "id": 1,
+              "name": "Amelia Sparks"
+            },
+            {
+              "id": 2,
+              "name": "Murphy Noel"
+            }
+          ],
+          "greeting": "Hello, Mckinney! You have 10 unread messages.",
+          "favoriteFruit": "apple"
+        },
+        {
+          "_id": "579b796f44c385d11b2ebc8a",
+          "index": 1,
+          "guid": "d6c9b661-ae1f-4065-9af0-96d15e8061ca",
+          "isActive": false,
+          "balance": "$3,842.68",
+          "picture": "http://placehold.it/32x32",
+          "age": 35,
+          "eyeColor": "green",
+          "name": {
+            "first": "Sherrie",
+            "last": "Conrad"
+          },
+          "company": "ZIZZLE",
+          "email": "sherrie.conrad@zizzle.com",
+          "phone": "+1 (954) 434-2389",
+          "address": "414 Interborough Parkway, Celeryville, Marshall Islands, 1957",
+          "about": "Anim enim est dolor ullamco. Amet ipsum eu reprehenderit est magna velit commodo nulla et ut. Laborum Lorem ad reprehenderit tempor adipisicing et veniam. Et incididunt nostrud incididunt elit ullamco id deserunt commodo id ex nostrud incididunt esse.",
+          "registered": "Monday, December 1, 2014 7:43 AM",
+          "latitude": "-5.65192",
+          "longitude": "100.661559",
+          "tags": [
+            "sit",
+            "ullamco",
+            "reprehenderit",
+            "et",
+            "Lorem"
+          ],
+          "range": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "friends": [
+            {
+              "id": 0,
+              "name": "Townsend Francis"
+            },
+            {
+              "id": 1,
+              "name": "Candy Dillard"
+            },
+            {
+              "id": 2,
+              "name": "Middleton Hurley"
+            }
+          ],
+          "greeting": "Hello, Sherrie! You have 7 unread messages.",
+          "favoriteFruit": "banana"
+        },
+        {
+          "_id": "579b796faac23e87507ea8e9",
+          "index": 2,
+          "guid": "a8b02ee6-3dae-47d0-91c0-cc6c1dbc7bfd",
+          "isActive": true,
+          "balance": "$2,360.11",
+          "picture": "http://placehold.it/32x32",
+          "age": 32,
+          "eyeColor": "blue",
+          "name": {
+            "first": "Cain",
+            "last": "Bentley"
+          },
+          "company": "HELIXO",
+          "email": "cain.bentley@helixo.ca",
+          "phone": "+1 (938) 449-3200",
+          "address": "731 Union Street, Umapine, Virgin Islands, 1693",
+          "about": "Ut amet qui incididunt magna irure aliqua cillum. Nostrud excepteur excepteur culpa commodo nostrud eu tempor aute ea labore ipsum eu ut. Quis sint velit sit aute irure occaecat irure non. Sunt occaecat laborum magna enim cillum ipsum culpa magna. Culpa consectetur irure cupidatat do aliquip qui ipsum.",
+          "registered": "Sunday, November 15, 2015 6:59 AM",
+          "latitude": "10.550894",
+          "longitude": "59.384288",
+          "tags": [
+            "ea",
+            "consequat",
+            "ex",
+            "reprehenderit",
+            "reprehenderit"
+          ],
+          "range": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "friends": [
+            {
+              "id": 0,
+              "name": "Buckner Villarreal"
+            },
+            {
+              "id": 1,
+              "name": "Mari Stanton"
+            },
+            {
+              "id": 2,
+              "name": "Eloise Cote"
+            }
+          ],
+          "greeting": "Hello, Cain! You have 9 unread messages.",
+          "favoriteFruit": "banana"
+        },
+        {
+          "_id": "579b796f1096e934dbf6d825",
+          "index": 3,
+          "guid": "5aef3492-d82e-40b8-ad93-523ea4d354e5",
+          "isActive": false,
+          "balance": "$3,846.75",
+          "picture": "http://placehold.it/32x32",
+          "age": 32,
+          "eyeColor": "green",
+          "name": {
+            "first": "Adriana",
+            "last": "Donovan"
+          },
+          "company": "PERMADYNE",
+          "email": "adriana.donovan@permadyne.org",
+          "phone": "+1 (975) 490-3757",
+          "address": "952 Mill Lane, Nipinnawasee, Ohio, 6811",
+          "about": "Do labore et Lorem sit laborum. Consectetur pariatur adipisicing nisi consectetur ipsum et cillum duis adipisicing voluptate Lorem et ad ex. Commodo pariatur minim proident consectetur commodo mollit fugiat ea nostrud velit eiusmod nisi eu.",
+          "registered": "Saturday, February 15, 2014 3:47 PM",
+          "latitude": "-80.237635",
+          "longitude": "163.267001",
+          "tags": [
+            "velit",
+            "ad",
+            "adipisicing",
+            "eiusmod",
+            "ipsum"
+          ],
+          "range": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "friends": [
+            {
+              "id": 0,
+              "name": "Stout Figueroa"
+            },
+            {
+              "id": 1,
+              "name": "Amy Valdez"
+            },
+            {
+              "id": 2,
+              "name": "Larsen Nicholson"
+            }
+          ],
+          "greeting": "Hello, Adriana! You have 10 unread messages.",
+          "favoriteFruit": "strawberry"
+        },
+        {
+          "_id": "579b796f3b077299691cae8f",
+          "index": 4,
+          "guid": "e787f8df-77e7-402f-a8e8-2f695b816674",
+          "isActive": true,
+          "balance": "$3,281.23",
+          "picture": "http://placehold.it/32x32",
+          "age": 22,
+          "eyeColor": "blue",
+          "name": {
+            "first": "Imogene",
+            "last": "Fischer"
+          },
+          "company": "ZENSOR",
+          "email": "imogene.fischer@zensor.biz",
+          "phone": "+1 (910) 453-2065",
+          "address": "340 Caton Place, Oasis, Indiana, 5942",
+          "about": "Nisi non et aute laborum laborum sunt quis. Enim deserunt proident Lorem pariatur est quis labore dolor enim amet. Qui ipsum et enim reprehenderit eu amet exercitation ex consequat officia et. Nisi id laboris cillum qui cupidatat incididunt magna excepteur. Duis incididunt ut exercitation quis dolore amet ipsum. Aliqua esse aliqua sint amet sunt id dolor commodo labore nostrud ut duis laborum sit.",
+          "registered": "Wednesday, June 15, 2016 1:44 AM",
+          "latitude": "79.10302",
+          "longitude": "141.320817",
+          "tags": [
+            "tempor",
+            "pariatur",
+            "velit",
+            "eiusmod",
+            "dolor"
+          ],
+          "range": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "friends": [
+            {
+              "id": 0,
+              "name": "Yvonne Peters"
+            },
+            {
+              "id": 1,
+              "name": "Castaneda Hobbs"
+            },
+            {
+              "id": 2,
+              "name": "Lawson Pruitt"
+            }
+          ],
+          "greeting": "Hello, Imogene! You have 5 unread messages.",
+          "favoriteFruit": "strawberry"
+        }];
+
+          var dataView = Ext.create('Ext.List', {
+            fullscreen: true,
+            grouped: true,
+            store: { 
+                fields: ["firstName", "lastName", "_id", "day"],  
+                data: dataArray,
+                groupField: "name.first",
+                sorters: ["name.last"]
+            },
+
+          var dataView2 = Ext.create('Ext.List2', {
+            fullscreen: true,
+            grouped: true,
+            store: { 
+                fields: ["name.first", "name.last", "_id", "picture"],  
+                data: dataArray2,
+                groupField: "name.first",
+                sorters: ["name.last"]
+            },
+
+            itemTpl: [
+                '<div class="avatar" style="background-image:url({_id})"></div>',
+                '<h3>{firstName} {lastName}</h3>123',
+                '<h4>{day}</h4>345'
+            ]          
+          });
+
+        Ext.Viewport.add(dataView);
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

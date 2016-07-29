@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sencha Mobile App | Daniel</title>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+    
+    <script src="http://cdn.sencha.com/touch/sencha-touch-2.1.1/sencha-touch-all-debug.js"></script>
+         <link rel="stylesheet" 
+        href="http://cdn.sencha.com/touch/sencha-touch-2.1.1/resources/css/sencha-touch.css" />
+
+
+    <script type="text/javascript">
+      
+        Ext.application({
+            launch: function () {
+                Ext.get('div1').setHtml('Ext Set this');
+            }
+        });
+        
+        $(document).ready(function () {
+            $('#div2').html('JQuery Set this');
+        });
+    </script>
+</head>
+    <body>
+        <div id="div1"></div>
+        <div id="div2"></div>
+    </body>
+</html>

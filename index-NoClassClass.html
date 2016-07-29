@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sencha Mobile App | Daniel</title>
+    
+    <script src="http://cdn.sencha.com/touch/sencha-touch-2.1.1/sencha-touch-all-debug.js"></script>
+    <link rel="stylesheet" href="http://cdn.sencha.com/touch/sencha-touch-2.1.1/resources/css/sencha-touch.css" />
+    
+    
+</head>
+<body>
+
+</body>
+
+    <script type="text/javascript">
+           
+        Ext.setup({
+            onReady: function () {
+              
+                Ext.define('Attendee', {
+                    config: {
+                        id: null,
+                        name: null,
+                        email: null,
+                        phone: null,
+                        volunteer: null
+                    },
+
+                    constructor: function(config) {
+                        this.initConfig(config);
+                    },
+
+                    
+                    applyVolunteer: function(newVolunteer, oldVolunteer) {
+                        if (oldVolunteer == undefined) {
+                            return newVolunteer;
+                        }
+
+                        if (this.getPhone() != undefined && this.getPhone().length > 0) {
+                            console.log('phone number found so volunteering OK');
+                            return true; // this is the value returned
+                        } else {
+                            console.log('need phone number to volunteer!');
+                            return false; // value returned
+                        }
+                    },
+
+                    // After Update
+                    updateVolunteer: function(newVolunteer, oldVolunteer) {
+                        if (newVolunteer == true) {
+                            console.log('Attendee Volunteer Confirmed. really send email here...');
+                        }
+                    }
+                });
+
+                var attendeeNew = Ext.create('Attendee', {
+                    id: 1001,
+                    name: 'Daniel Lim',
+                    email: 'Daniel@Profoundideation.com',
+                    phone: '',
+                    volunteer: false
+                });
+
+                debugger;
+
+                var rec = attendeeNew.setVolunteer(true);
+
+                console.log('**Final volunteer status: ' + rec.getVolunteer());
+
+            }
+        });
+
+    </script>
+
+    
+    
+</html>

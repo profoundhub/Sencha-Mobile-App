@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sencha Mobile App | Daniel</title>
+    
+   <script src="http://cdn.sencha.com/touch/sencha-touch-2.1.1/sencha-touch-all-debug.js"></script>
+         <link rel="stylesheet" 
+        href="http://cdn.sencha.com/touch/sencha-touch-2.1.1/resources/css/sencha-touch.css" />
+
+    <script type="text/javascript">
+        var goFunction = function() {
+            var basicObject = {
+                xtype: 'panel',
+                html: '<b>Daniel\'s Sencha Rocks</b>'
+            };
+            Ext.Viewport.add(basicObject);
+        };
+        var myConfig = {
+            onReady: goFunction
+        };
+        Ext.setup(myConfig);
+    </script>
+
+
+</head>
+
+
+    <body>
+        
+        <div id="MyDivId">
+            
+        </div>
+
+    </body>
+</html>
